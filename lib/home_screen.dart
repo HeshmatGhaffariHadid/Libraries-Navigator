@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'clickable_card.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -18,13 +17,14 @@ class HomeScreen extends StatelessWidget {
               fontWeight: FontWeight.bold
           ),
         ),
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.green,
       ),
-      backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          ClickableCard(),
-        ],
+      backgroundColor: Colors.grey.shade200,
+      body: ListView.builder(
+        itemCount: 7,
+          itemBuilder: (context ,index){
+          return ClickableCard(index);
+        },
       ),
     );
   }
