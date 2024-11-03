@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:libraries_navigator/details_screen.dart';
+import 'package:libraries_navigator/constants.dart';
+import 'package:libraries_navigator/screens/details_screen.dart';
 
 class ClickableCard extends StatelessWidget {
-  int index;
-  ClickableCard(this.index, {super.key});
+  final int index;
+  const ClickableCard(this.index, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +29,8 @@ class ClickableCard extends StatelessWidget {
           ),
           child: Center(
             child: Text(DetailsScreen.details[index].name,
-                style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold)),
+                style: kTitleStyle,
+            ),
           ),
         ),
       ),
