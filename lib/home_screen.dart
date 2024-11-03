@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Flutter Libraries',
+          'Most Used Flutter Libraries',
           style: TextStyle(
               fontSize: 22,
               color: Colors.white,
