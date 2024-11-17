@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libraries_navigator/constants.dart';
 import '../widgets/clickable_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,10 +10,7 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text(
             'Most Used Flutter Libraries)',
-            style: TextStyle(
-                fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-          backgroundColor: Colors.green,
+            style: kTitleStyle),
         ),
         backgroundColor: Colors.grey.shade200,
         body:  const Column(
@@ -20,8 +18,8 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ClickableCard('intl')),
-                Expanded(child: ClickableCard('material_dialog')),
+                Expanded(child: ClickableCard('intl', '/intl')),
+                Expanded(child: ClickableCard('material_dialog','')),
               ],
             ),
           ),
@@ -29,24 +27,24 @@ class HomeScreen extends StatelessWidget {
 
             child: Row(
               children: [
-                Expanded(child: ClickableCard('confetti')),
-                Expanded(child: ClickableCard('animated_flip_counter')),
+                Expanded(child: ClickableCard('confetti','')),
+                Expanded(child: ClickableCard('animated_flip_counter','')),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ClickableCard('animated_textkit')),
-                Expanded(child: ClickableCard('like_button')),
+                Expanded(child: ClickableCard('animated_textkit','')),
+                Expanded(child: ClickableCard('like_button','')),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ClickableCard('Flutter Toast Package')),
-                Expanded(child: ClickableCard('Flutter Toast Package')),
+                Expanded(child: ClickableCard('material-dialog','/material_dialog')),
+                Expanded(child: ClickableCard('Flutter Toast Package','')),
               ],
             ),
           ),

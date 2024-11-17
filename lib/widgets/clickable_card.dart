@@ -3,7 +3,8 @@ import 'package:libraries_navigator/constants.dart';
 
 class ClickableCard extends StatelessWidget {
   final String name;
-  const ClickableCard(this.name, {super.key});
+  final String rout;
+  const ClickableCard(this.name,this.rout, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class ClickableCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 4),
       child: GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, '/intl');
+          Navigator.pushNamed(context, rout);
         },
         child: Container(
           decoration: BoxDecoration(

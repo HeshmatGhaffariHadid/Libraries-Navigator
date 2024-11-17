@@ -37,12 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.6.0
 #  import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-#  fluttertoast: ^8.2.3
+  fluttertoast: ^8.2.3
 #  import 'package:fluttertoast/fluttertoast.dart';
   intl: ^0.18.0
-#  import 'package:intl_utils/intl_utils.dart';
-#  video_player: ^2.7.2
-#  import 'package:video_player/video_player.dart';
   material_dialogs: ^1.1.4
 #  import 'package:material_dialogs/material_dialogs.dart';
   confetti: ^0.7.0

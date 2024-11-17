@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:libraries_navigator/screens/intl_screen.dart';
+import 'package:libraries_navigator/screens/material_dialog.dart';
 import 'screens/home_screen.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeScreen(),
         '/intl': (context) => IntlScreen(),
+        '/material_dialog': (context) => MaterialDialog(),
       },
       theme: ThemeData.light().copyWith(
         colorScheme: ColorScheme.fromSeed(
