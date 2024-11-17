@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:libraries_navigator/screens/intl_screen.dart';
 import 'screens/home_screen.dart';
 
 void main() {
-  runApp( const MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,7 +11,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const HomeScreen();
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/intl': (context) => IntlScreen(),
+      },
+      theme: ThemeData.light().copyWith(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.green,
+          brightness: Brightness.light,
+        ),
+      ),
+    );
   }
 }
-

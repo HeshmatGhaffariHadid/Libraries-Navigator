@@ -35,6 +35,27 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^10.6.0
+#  import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+#  fluttertoast: ^8.2.3
+#  import 'package:fluttertoast/fluttertoast.dart';
+  intl: ^0.18.0
+#  import 'package:intl_utils/intl_utils.dart';
+#  video_player: ^2.7.2
+#  import 'package:video_player/video_player.dart';
+  material_dialogs: ^1.1.4
+#  import 'package:material_dialogs/material_dialogs.dart';
+  confetti: ^0.7.0
+#  import 'package:confetti/confetti.dart';
+  animated_flip_counter: ^0.2.6
+#  import 'package:animated_flip_counter/animated_flip_counter.dart';
+  animated_text_kit: ^4.2.2
+#  import 'package:animated_text_kit/animated_text_kit.dart';
+  like_button: ^2.0.5
+#  import 'package:like_button/like_button.dart';
+
+
+
 
 dev_dependencies:
   flutter_test:
