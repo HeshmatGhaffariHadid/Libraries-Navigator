@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:libraries_navigator/screens/intl_screen.dart';
 import 'package:libraries_navigator/screens/material_dialog.dart';
+import 'package:libraries_navigator/screens/toast_screen.dart';
 import 'screens/home_screen.dart';
 
 void main() {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomeScreen(),
         '/intl': (context) => IntlScreen(),
         '/material_dialog': (context) => MaterialDialog(),
+        '/toast_screen' : (context) => ToastScreen(),
       },
       theme: ThemeData.light().copyWith(
         colorScheme: ColorScheme.fromSeed(

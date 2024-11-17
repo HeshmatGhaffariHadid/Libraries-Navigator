@@ -69,7 +69,8 @@ class MaterialDialog extends StatelessWidget {
                       color: Colors.white,
                       actions: [
                         IconsOutlineButton(
-                          onPressed: () {},
+                          onPressed: () {
+                          },
                           text: 'Cancel',
                           iconData: Icons.cancel_outlined,
                           textStyle: TextStyle(color: Colors.grey),
@@ -89,7 +90,6 @@ class MaterialDialog extends StatelessWidget {
                     style: kTextStyle,
                   )),
             ),
-
           ],
         ),
       ),

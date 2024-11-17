@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(child: ClickableCard('material-dialog','/material_dialog')),
-                Expanded(child: ClickableCard('Flutter Toast Package','')),
+                Expanded(child: ClickableCard('Flutter Toast Package','/toast_screen')),
               ],
             ),
           ),
