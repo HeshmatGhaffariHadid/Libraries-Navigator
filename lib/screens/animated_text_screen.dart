@@ -1,7 +1,5 @@
-
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:libraries_navigator/constants.dart';
 
 class AnimatedTextScreen extends StatefulWidget {
   const AnimatedTextScreen({super.key});
@@ -18,12 +16,11 @@ late Animation animation;
 @override
   void initState() {
     super.initState();
-    controller = AnimationController(vsync: this,duration: Duration(seconds: 3));
+    controller = AnimationController(vsync: this,duration: const Duration(seconds: 3));
     controller.forward();
     controller.addListener(() { 
       setState(() {});
     });
-
     animation = ColorTween(
       end:  Colors.green,
       begin: Colors.yellow,
@@ -34,13 +31,24 @@ late Animation animation;
     super.dispose();
     controller.dispose();
   }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Animated Text Package', style: kTitleStyle),
+        title: DefaultTextStyle(
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 26
+          ),
+          child: AnimatedTextKit(
+            repeatForever: true,
+            animatedTexts: [
+            RotateAnimatedText('Animated Text Kit '),
+          ],
+
+          ),
+        )
+        // Text('Animated Text Package', style: kTitleStyle),
       ),
       backgroundColor: Colors.white.withOpacity(controller.value),
       body: Center(

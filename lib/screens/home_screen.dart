@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(child: ClickableCard('confetti','')),
-                Expanded(child: ClickableCard('animated_flip_counter','')),
+                Expanded(child: ClickableCard('animated_flip_counter','/animated_flip_counter')),
               ],
             ),
           ),

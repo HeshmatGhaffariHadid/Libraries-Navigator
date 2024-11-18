@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libraries_navigator/screens/animated_flip_counter.dart';
 import 'package:libraries_navigator/screens/animated_text_screen.dart';
 import 'package:libraries_navigator/screens/intl_screen.dart';
 import 'package:libraries_navigator/screens/material_dialog.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/material_dialog': (context) => MaterialDialog(),
         '/toast_screen' : (context) => ToastScreen(),
         '/animated_text' : (context) => AnimatedTextScreen(),
+        '/animated_flip_counter' : (context) => AnimatedFlip(),
       },
       theme: ThemeData.light().copyWith(
         colorScheme: ColorScheme.fromSeed(
