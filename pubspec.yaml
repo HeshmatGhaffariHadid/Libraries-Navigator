@@ -36,12 +36,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.6.0
-#  import 'package:font_awesome_flutter/font_awesome_flutter.dart';
   flutter_styled_toast: ^2.1.3
-#  import 'package:flutter_styled_toast/flutter_styled_toast.dart';
   intl: ^0.18.0
   material_dialogs: ^1.1.4
-
   animated_flip_counter: ^0.2.6
 #  import 'package:animated_flip_counter/animated_flip_counter.dart';
   animated_text_kit: ^4.2.2

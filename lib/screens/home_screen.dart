@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(child: ClickableCard('intl', '/intl')),
-                Expanded(child: ClickableCard('material_dialog','')),
+                Expanded(child: ClickableCard('material_dialog','/material_dialog')),
               ],
             ),
           ),
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ClickableCard('animated_textkit','')),
+                Expanded(child: ClickableCard('animated_textkit','/animated_text')),
                 Expanded(child: ClickableCard('like_button','')),
               ],
             ),
@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ClickableCard('material-dialog','/material_dialog')),
+                Expanded(child: ClickableCard('','')),
                 Expanded(child: ClickableCard('Flutter Toast Package','/toast_screen')),
               ],
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libraries_navigator/screens/animated_text_screen.dart';
 import 'package:libraries_navigator/screens/intl_screen.dart';
 import 'package:libraries_navigator/screens/material_dialog.dart';
 import 'package:libraries_navigator/screens/toast_screen.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/intl': (context) => IntlScreen(),
         '/material_dialog': (context) => MaterialDialog(),
         '/toast_screen' : (context) => ToastScreen(),
+        '/animated_text' : (context) => AnimatedTextScreen(),
       },
       theme: ThemeData.light().copyWith(
         colorScheme: ColorScheme.fromSeed(
