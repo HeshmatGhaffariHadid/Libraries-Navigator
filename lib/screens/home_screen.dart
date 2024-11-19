@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text(
-            'Most Used Flutter Libraries)',
+            'Flutter Libraries',
             style: kTitleStyle),
         ),
         backgroundColor: Colors.grey.shade200,
@@ -18,8 +18,8 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ClickableCard('intl', '/intl')),
-                Expanded(child: ClickableCard('material_dialog','/material_dialog')),
+                Expanded(child: ClickableCard('Intl', '/intl')),
+                Expanded(child: ClickableCard('Material Dialog','/material_dialog')),
               ],
             ),
           ),
@@ -27,36 +27,28 @@ class HomeScreen extends StatelessWidget {
 
             child: Row(
               children: [
-                Expanded(child: ClickableCard('confetti','')),
-                Expanded(child: ClickableCard('animated_flip_counter','/animated_flip_counter')),
+                Expanded(child: ClickableCard('Reward Popup','/popup_reward')),
+                Expanded(child: ClickableCard('Flip Counter','/animated_flip_counter')),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ClickableCard('animated_textkit','/animated_text')),
-                Expanded(child: ClickableCard('insta_like_button','/like_button')),
+                Expanded(child: ClickableCard('Animated Text','/animated_text')),
+                Expanded(child: ClickableCard('Like Button','/like_button')),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ClickableCard('','')),
-                Expanded(child: ClickableCard('Flutter Toast Package','/toast_screen')),
+                Expanded(child: ClickableCard('Flutter Toast','/toast_screen')),
               ],
             ),
           ),
         ],
         ),
-
-        // ListView.builder(
-        //   itemCount: 7,
-        //     itemBuilder: (context ,index){
-        //     return ClickableCard(index);
-        //   },
-        // ),
     );
   }
 }

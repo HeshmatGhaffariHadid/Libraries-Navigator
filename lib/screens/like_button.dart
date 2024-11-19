@@ -24,6 +24,8 @@ class _LikeButtonState extends State<LikeButton> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text('Double click on the photo to be liked',style: TextStyle(color: Colors.blueGrey.shade300,fontSize: 14),),
+            SizedBox(height: 20),
             InstaLikeButton(
               image: const AssetImage('images/mersadJan.jpg'),
               onChanged: () {

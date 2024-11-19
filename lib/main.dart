@@ -4,6 +4,7 @@ import 'package:libraries_navigator/screens/animated_text_screen.dart';
 import 'package:libraries_navigator/screens/intl_screen.dart';
 import 'package:libraries_navigator/screens/like_button.dart';
 import 'package:libraries_navigator/screens/material_dialog.dart';
+import 'package:libraries_navigator/screens/popup_reward.dart';
 import 'package:libraries_navigator/screens/toast_screen.dart';
 import 'screens/home_screen.dart';
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/animated_text' : (context) => AnimatedTextScreen(),
         '/animated_flip_counter' : (context) => AnimatedFlip(),
         '/like_button' : (context) => LikeButton(),
+        '/popup_reward' : (context) => PopupReward(),
       },
       theme: ThemeData.light().copyWith(
         colorScheme: ColorScheme.fromSeed(

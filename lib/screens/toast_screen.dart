@@ -20,7 +20,6 @@ class ToastScreen extends StatelessWidget {
               color: Colors.green.shade100,
               borderRadius: BorderRadius.circular(10),
             ),
-
             child: Center(
               child: Container(
                 decoration: BoxDecoration(
