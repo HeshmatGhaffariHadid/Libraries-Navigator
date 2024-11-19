@@ -40,11 +40,8 @@ dependencies:
   intl: ^0.18.0
   material_dialogs: ^1.1.4
   animated_flip_counter: ^0.2.5
-#  import 'package:animated_flip_counter/animated_flip_counter.dart';
   animated_text_kit: ^4.2.2
-#  import 'package:animated_text_kit/animated_text_kit.dart';
-  like_button: ^2.0.5
-#  import 'package:like_button/like_button.dart';
+  insta_like_button: ^0.1.1
 
 
 
@@ -71,8 +68,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - images/mersadJan.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

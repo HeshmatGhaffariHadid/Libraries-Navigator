@@ -54,51 +54,61 @@ late Animation animation;
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  // mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Text(
-                      'TypeWriter: ',
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.green,
-                      ),
+          child: Container(
+            height: 150,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.green.shade100,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      // mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Text(
+                          'TypeWriter: ',
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.green,
+                          ),
+                        ),
+                        const Text(
+                          'Flutter is ',
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.green,
+                          ),
+                        ),
+                        DefaultTextStyle(
+                          style: const TextStyle(
+                            fontSize: 24,
+                            color: Colors.green,
+                          ),
+                          child: AnimatedTextKit(
+                            repeatForever: true,
+                            animatedTexts: [
+                              TypewriterAnimatedText('Awesome'),
+                              TypewriterAnimatedText('Amazing'),
+                              TypewriterAnimatedText('The Best'),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                    const Text(
-                      'Flutter is ',
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.green,
-                      ),
-                    ),
-                    DefaultTextStyle(
-                      style: const TextStyle(
-                        fontSize: 24,
-                        color: Colors.green,
-                      ),
-                      child: AnimatedTextKit(
-                        repeatForever: true,
-                        animatedTexts: [
-                          TypewriterAnimatedText('Awesome'),
-                          TypewriterAnimatedText('Amazing'),
-                          TypewriterAnimatedText('The Best'),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                  // SizedBox(height: 40),
+                  Text('This is a custom Animation!',style: TextStyle(
+                    color: animation.value,
+                    fontSize: controller.value * 24,
+                  ),),
+                ],
               ),
-              // SizedBox(height: 40),
-              Text('This is a custom Animation!',style: TextStyle(
-                color: animation.value,
-                fontSize: controller.value * 24,
-              ),),
-            ],
+            ),
           ),
         ),
       ),

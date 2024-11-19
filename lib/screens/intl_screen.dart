@@ -26,41 +26,67 @@ class IntlScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(
-                      FontAwesomeIcons.calendar,
-                      color: Colors.green,
-                      size: 28,
-                    ),
-                    SizedBox(width: 5),
-                    Text('Date: $dateFormat',
-                        style: const TextStyle(
-                            color: Colors.green,
-                            fontSize: 24,
-                            )),
-                  ],
+                Container(
+                  height: 120,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.green.shade100,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(
+                        FontAwesomeIcons.calendar,
+                        color: Colors.green,
+                        size: 28,
+                      ),
+                      const SizedBox(width: 5),
+                      Text('Date: $dateFormat',
+                          style: const TextStyle(
+                              color: Colors.green,
+                              fontSize: 24,
+                              )),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(FontAwesomeIcons.clock,color: Colors.green, size: 28),
-                    const SizedBox(width: 5),
-                    Text('Time: $timeFormat',
-                        style: const TextStyle(
-                            color: Colors.green,
-                            fontSize: 24,
-                         )),
-                  ],
+                Container(
+                  height: 120,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.green.shade100,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(FontAwesomeIcons.clock,color: Colors.green, size: 28),
+                      const SizedBox(width: 5),
+                      Text('Time: $timeFormat',
+                          style: const TextStyle(
+                              color: Colors.green,
+                              fontSize: 24,
+                           )),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 20),
-                Text('Full Format: $fullFormat',textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.green,
-                      fontSize: 24,
-                    )),
+                Container(
+                  height: 120,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.green.shade100,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Center(
+                    child: Text('Full Format: $fullFormat',textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Colors.green,
+                          fontSize: 24,
+                        )),
+                  ),
+                ),
               ],
             ),
           ),

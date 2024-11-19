@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:libraries_navigator/screens/animated_flip_counter.dart';
 import 'package:libraries_navigator/screens/animated_text_screen.dart';
 import 'package:libraries_navigator/screens/intl_screen.dart';
+import 'package:libraries_navigator/screens/like_button.dart';
 import 'package:libraries_navigator/screens/material_dialog.dart';
 import 'package:libraries_navigator/screens/toast_screen.dart';
 import 'screens/home_screen.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/toast_screen' : (context) => ToastScreen(),
         '/animated_text' : (context) => AnimatedTextScreen(),
         '/animated_flip_counter' : (context) => AnimatedFlip(),
+        '/like_button' : (context) => LikeButton(),
       },
       theme: ThemeData.light().copyWith(
         colorScheme: ColorScheme.fromSeed(

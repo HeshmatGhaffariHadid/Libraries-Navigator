@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(child: ClickableCard('animated_textkit','/animated_text')),
-                Expanded(child: ClickableCard('like_button','')),
+                Expanded(child: ClickableCard('insta_like_button','/like_button')),
               ],
             ),
           ),

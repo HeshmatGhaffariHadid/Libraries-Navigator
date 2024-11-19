@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:libraries_navigator/constants.dart';
 import 'package:material_dialogs/dialogs.dart';
@@ -17,17 +18,28 @@ class MaterialDialog extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 250,
-              height: 80,
-              decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.circular(10)),
-              child: TextButton(
-                  onPressed: () => Dialogs.materialDialog(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 8),
+          child: Container(
+            height: 400,
+            width: double.infinity,
+            decoration:BoxDecoration(
+              color: Colors.green.shade100,
+              borderRadius: BorderRadius.circular(10),
+
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+
+                Container(
+                  width: 250,
+                  height: 80,
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: TextButton(
+                      onPressed: () => Dialogs.materialDialog(
                           context: context,
                           title: 'Delete',
                           msg: 'Are you sure?',
@@ -49,49 +61,53 @@ class MaterialDialog extends StatelessWidget {
                               iconColor: Colors.white,
                             ),
                           ]),
-                  child: Text(
-                    'Material Dialog',
-                    style: kTextStyle,
-                  )),
+                      child: const Text(
+                        'Material Dialog',
+                        style: kTextStyle,
+                      )),
+                ),
+                SizedBox(height: 20),
+                Container(
+                  width: 250,
+                  height: 80,
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: TextButton(
+                      onPressed: () => Dialogs.bottomMaterialDialog(
+                          context: context,
+                          title: 'Edit',
+                          msg: 'Do you wanna edit your name',
+                          color: Colors.white,
+                          actions: [
+                            IconsOutlineButton(
+                              onPressed: () {
+                              },
+                              text: 'Cancel',
+                              iconData: Icons.cancel_outlined,
+                              textStyle: TextStyle(color: Colors.grey),
+                              iconColor: Colors.grey,
+                            ),
+                            IconsButton(
+                              onPressed: () {},
+                              text: 'Edit',
+                              iconData: Icons.edit,
+                              color: Colors.green,
+                              textStyle: TextStyle(color: Colors.white),
+                              iconColor: Colors.white,
+                            ),
+                          ]),
+                      child: Text(
+                        'Bottom Dialog',
+                        style: kTextStyle,
+                      )),
+                ),
+              ],
             ),
-            SizedBox(height: 20),
-            Container(
-              width: 250,
-              height: 80,
-              decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.circular(10)),
-              child: TextButton(
-                  onPressed: () => Dialogs.bottomMaterialDialog(
-                      context: context,
-                      title: 'Edit',
-                      msg: 'Do you wanna edit your name',
-                      color: Colors.white,
-                      actions: [
-                        IconsOutlineButton(
-                          onPressed: () {
-                          },
-                          text: 'Cancel',
-                          iconData: Icons.cancel_outlined,
-                          textStyle: TextStyle(color: Colors.grey),
-                          iconColor: Colors.grey,
-                        ),
-                        IconsButton(
-                          onPressed: () {},
-                          text: 'Edit',
-                          iconData: Icons.edit,
-                          color: Colors.green,
-                          textStyle: TextStyle(color: Colors.white),
-                          iconColor: Colors.white,
-                        ),
-                      ]),
-                  child: Text(
-                    'Bottom Dialog',
-                    style: kTextStyle,
-                  )),
-            ),
-          ],
+
+          ),
         ),
+
       ),
     );
   }

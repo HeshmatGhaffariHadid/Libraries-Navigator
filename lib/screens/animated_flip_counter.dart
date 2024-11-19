@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../constants.dart';
 
 class AnimatedFlip extends StatefulWidget {
+  const AnimatedFlip({super.key});
+
   @override
   State<AnimatedFlip> createState() => _AnimatedFlipState();
 }
@@ -23,36 +25,86 @@ class _AnimatedFlipState extends State<AnimatedFlip> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              AnimatedFlipCounter(
-                value: counter,
-                duration: const Duration(seconds: 1),
-                textStyle: TextStyle(
-                color: Colors.green,
-                fontSize: 26,
+              Container(
+                height: 250,
+                width: 150,
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: AnimatedFlipCounter(
+                  value: counter,
+                  duration: const Duration(milliseconds: 400),
+                  textStyle: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 46,
+                ),
+                ),
               ),
-              ),
+              const SizedBox(height: 20),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  IconButton.outlined(
-                    color: Colors.green,
-                      onPressed: () {
-                        setState(() {
-                          counter++;
-                        });
-                      },
-                      icon: Icon(Icons.add, color: Colors.green, size: 24)),
-                  SizedBox(width: 15),
-                  IconButton.outlined(
-                    color: Colors.green,
-                      onPressed: () {
-                        setState(() {
-                          counter--;
-                        });
-                      },
-                      icon: Icon(FontAwesomeIcons.minus,
-                          size: 24, color: Colors.green))
+                  Container(
+                    height: 50,
+                    width: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.green.shade100,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: IconButton.outlined(
+                        padding: const EdgeInsets.all(12),
+                        hoverColor: Colors.yellow,
+                      color: Colors.white,
+                        onPressed: () {
+                          setState(() {
+                            counter++;
+                          });
+                        },
+                        icon: const Icon(Icons.add, color: Colors.green, size: 24)),
+                  ),
+                  const SizedBox(width: 15),
+                  Container(
+                    height: 50,
+                    width: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.green.shade100,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: IconButton.outlined(
+                      padding: const EdgeInsets.all(12),
+                      hoverColor: Colors.yellow,
+                      color: Colors.white,
+                        onPressed: () {
+                          setState(() {
+                            counter--;
+                          });
+                        },
+                        icon: const Icon(FontAwesomeIcons.minus,
+                            size: 24, color: Colors.green)),
+                  ),
                 ],
               ),
+              const SizedBox(height: 15),
+              Container(
+                height: 50,
+                width: 70,
+                decoration: BoxDecoration(
+                  color: Colors.green.shade100,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: TextButton(
+                  child: const Text('ZERO',style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 16,
+                  ),),
+                    onPressed: () {
+                      setState(() {
+                        counter = 0;
+                      });
+                    },
+                ),
+              )
             ],
           ),
         ),
